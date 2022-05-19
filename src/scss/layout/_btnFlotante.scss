@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.btn-flotante{
+  position: fixed;
+  height: 4.5rem;
+  width: 4.5rem;
+  background-color: v.$blanco;
+  bottom: 3rem;
+  right: 3rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  svg{
+    fill: v.$rojoOscuro;
+  }
+
+  @include m.tablet{
+    right: 5rem;
+  }
+
+  @include m.desktop{
+    right: 7rem;
+  }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
